@@ -1,0 +1,88 @@
+.cta {
+  font-family: "Space Grotesk", sans-serif;
+  padding: 64px 24px;
+  text-align: center;
+  border-top: 2px solid grey;
+  margin-inline: 40px;
+}
+
+.cta h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.cta p {
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 24px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.primary,
+.secondary {
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 300;
+  font-size: 15px;
+  transition: background 0.2s ease;
+  text-align: center;
+  min-width: 140px;
+}
+
+.primary {
+  background-color: #000000;
+  color: white;
+  border: none;
+}
+
+.primary:hover {
+  background-color: #303030;
+}
+
+.secondary {
+  border: 1px solid #ccc;
+  color: #000000;
+  background-color: white;
+}
+
+.secondary:hover {
+  background-color: #f1f1f1;
+}
+
+/* 🔧 Responsive Styling */
+@media (max-width: 768px) {
+  .cta {
+    padding: 48px 16px;
+  }
+
+  .cta h2 {
+    font-size: 20px;
+  }
+
+  .cta p {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+    max-width: 320px;
+  }
+}

@@ -1,0 +1,389 @@
+/* Add this to CropTrends.css */
+.crop-market-trends {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-color: #cfc6c6;
+}
+
+.news-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.news-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.news-header p {
+  max-width: 700px;
+  margin: 0.5rem auto;
+  font-size: 1rem;
+  color: #666;
+}
+.category-tags {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.category-tags span {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+}
+
+.news-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+.news-feed{
+  background: #f6fefc;
+  padding: 2rem;
+  border-radius: 20px;
+}
+.news-list-new {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 2rem;
+  margin-inline: 10rem;
+}
+
+.news-card-new {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem 2rem;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.news-card-new:hover {
+  transform: translateY(-3px);
+}
+
+.news-header-row {
+  display: flex;
+  gap: 1rem;
+  text-align: start;
+}
+
+.category-icon {
+  font-size: 1.75rem;
+}
+
+.gov {
+  color: #0066ff;
+}
+.weather {
+  color: #f5a623;
+}
+.market {
+  color: #ff4d4f;
+}
+.research {
+  color: #00c853;
+}
+
+.news-headline-block {
+  flex: 1;
+}
+
+.news-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #111;
+}
+
+.news-date {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 2px;
+}
+
+.news-description {
+  font-size: 0.95rem;
+  color: #333;
+  text-align: start;
+  margin-top: 0.1rem;
+}
+
+.news-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-category-badge {
+  background-color: #8cadde;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  border-radius: 4rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.read-more {
+  font-size: 0.85rem;
+  color: #00a755;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.why-news-matters {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #d2e2ea;
+  margin-block: 3rem;
+  border-radius: 20px;
+}
+
+.why-news-matters h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.why-news-matters p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 16px;
+  color: #555;
+}
+
+.benefits-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.benefit-item {
+  max-width: 260px;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.benefit-icon {
+  background: #e3fcef;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.coming-soon {
+  background-color: #22c55e;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.coming-soon h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.coming-soon p {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.coming-features {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  justify-content: space-evenly;
+}
+
+.comingSoon-box {
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.comingSoon-icon {
+  font-size: 30px;
+  margin: 0;
+}
+
+.comingSoon-box p{
+  margin: 0;
+  padding: 0;
+}
+.comingSoon-box h5{
+  margin: 0;
+  padding: 0;
+}
+.benefit-item,
+.comingSoon-box {
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+}
+
+.benefit-item:hover,
+.comingSoon-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+/* === Responsive Enhancements === */
+@media (max-width: 1024px) {
+  .news-header h1 {
+    font-size: 2rem;
+  }
+
+  .news-header p {
+    font-size: 0.95rem;
+  }
+
+  .news-list-new {
+    margin-inline: 5rem;
+  }
+
+  .coming-features {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .comingSoon-box {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .category-tags {
+    flex-wrap: wrap;
+  }
+
+  .news-list-new {
+    margin-inline: 2rem;
+  }
+
+  .news-title {
+    font-size: 0.95rem;
+  }
+
+  .news-description {
+    font-size: 0.9rem;
+  }
+
+  .why-news-matters h2 {
+    font-size: 1.8rem;
+  }
+
+  .why-news-matters p {
+    font-size: 0.95rem;
+  }
+
+  .benefits-section {
+    gap: 1rem;
+  }
+
+  .benefit-item {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .crop-market-trends {
+    padding: 1rem;
+  }
+
+  .news-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .news-header p {
+    font-size: 0.9rem;
+  }
+
+  .news-card-new {
+    padding: 1rem;
+  }
+
+  .news-list-new {
+    margin-inline: 0;
+  }
+
+  .news-title {
+    font-size: 0.9rem;
+  }
+
+  .news-description {
+    font-size: 0.85rem;
+  }
+
+  .news-date {
+    font-size: 0.8rem;
+  }
+
+  .read-more {
+    font-size: 0.8rem;
+  }
+
+  .why-news-matters h2 {
+    font-size: 1.5rem;
+  }
+
+  .why-news-matters p {
+    font-size: 0.9rem;
+  }
+
+  .coming-soon h2 {
+    font-size: 1.5rem;
+  }
+
+  .coming-soon p {
+    font-size: 0.95rem;
+  }
+
+  .coming-features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comingSoon-box {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

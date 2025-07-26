@@ -1,0 +1,132 @@
+/* AuthPage.css */
+
+.auth-fullscreen {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.auth-form-overlay {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.auth-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.auth-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-input {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.signup-btn {
+  background-color: #2e7d32;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup-btn:hover {
+  background-color: #1b5e20;
+}
+
+.divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 20px 0;
+}
+
+.auth-continue {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #777;
+}
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .auth-fullscreen {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .auth-form-overlay {
+    padding: 30px 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .auth-title {
+    font-size: 1.5rem;
+  }
+
+  .auth-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .auth-input {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  .signup-btn {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-form-overlay {
+    padding: 20px 15px;
+  }
+
+  .auth-title {
+    font-size: 1.2rem;
+  }
+
+  .auth-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .auth-input {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .signup-btn {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}

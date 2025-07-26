@@ -1,0 +1,231 @@
+.footer {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #252525;
+  padding: 48px;
+  height: auto;
+  width: auto;
+  border-radius: 50px 50px 0 0;
+}
+
+.footer-upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5px;
+  padding-bottom: 20px;
+  width: 100%;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.main-icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  color: #e2e8f0;
+  font-size: 15px;
+  
+}
+
+.main-icons a {
+  color: white;
+  text-decoration: none;
+}
+.main-icons a:hover {
+  text-decoration: underline;
+}
+.social-icons {
+  display: flex;
+  gap: 16px;
+  color: #ffffff;
+  font-size: 16px;
+  transition: color 0.2s ease;
+  border-radius: 20px;
+}
+
+
+.logo{
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+.footer-middle{
+  border-bottom: 1px solid #334155;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 32px;
+  color: white;
+  width: 100%;
+}
+
+.contact-box{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-block: 20px;
+}
+
+
+
+.label {
+  background-color: #a3e635;
+  color: #000;
+  font-weight: 600;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.subscribe-box {
+  
+  width: 40%;
+  background-color: #1e293b;
+  padding: 16px;
+  padding-block: 50px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subscribe-box input {
+  font-family: "Space Grotesk", sans-serif;
+  padding: 10px 14px;
+  height: 30px;
+  width: 50%;
+  border-radius: 12px;
+  border: 1px solid #475569;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.subscribe-box button {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #a3e635;
+  color: #000;
+  padding: 10px 14px;
+  border: none;
+  height: 50px;
+  width: 50%;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.subscribe-box button:hover {
+  background-color: #bef264;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  align-items: center;
+  color: white;
+  width: 100%;
+  font-size: 13px;
+}
+
+.footer-bottom a {
+  color: #e2e8f0;
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+@media (max-width: 1024px) {
+  .hero-text h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  .hero-btn {
+    font-size: 0.95rem;
+    padding: 0.65rem 1.3rem;
+  }
+
+  .tab-item {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .modern-hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .hero-top {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  .hero-btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .drone-image img {
+    max-width: 100%;
+  }
+
+  .hero-tabs {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .tab-item {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .modern-hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .hero-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .tab-item h3 {
+    font-size: 1rem;
+  }
+
+  .tab-item p {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,137 @@
+/* General Section Styling */
+.weather-section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Weather Header */
+.weather-header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+}
+
+.weather-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.weather-header p {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Colored Patch Cards */
+.weather-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.weather-card {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fefce8; /* soft yellow */
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: 0.3s ease;
+  border-left: 8px solid #facc15;
+}
+
+.weather-card:nth-child(2) {
+  background-color: #e0f2fe; /* light blue */
+  border-left-color: #38bdf8;
+}
+
+.weather-card:nth-child(3) {
+  background-color: #dcfce7; /* light green */
+  border-left-color: #4ade80;
+}
+
+.weather-card .icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.weather-card h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.weather-card p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Coming Soon Dark Section */
+.coming-soon {
+  background-color: #151515;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  color: white;
+  text-align: center;
+}
+
+.coming-soon h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.soon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.soon-card {
+  background-color: #1f1f1f;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.soon-card:hover {
+  background-color: #272727;
+}
+
+.soon-card .icon {
+  font-size: 1.8rem;
+  color: #a3e635;
+  margin-bottom: 0.5rem;
+}
+
+.soon-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.soon-card p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+@media (max-width: 768px) {
+  .weather-section {
+    padding: 2rem 1rem;
+  }
+
+  .coming-soon {
+    padding: 2rem 1rem;
+  }
+
+  .weather-header p {
+    padding: 0 1rem;
+  }
+}

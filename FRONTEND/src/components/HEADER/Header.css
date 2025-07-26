@@ -1,0 +1,103 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+  padding: 1rem 2rem;
+  position: relative;
+  top: 0;
+  z-index: 1000;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Logo on the left */
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  width: 33.3%;
+}
+
+.logo a:hover {
+  color: #00ffcc;
+}
+
+/* Center navigation links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #00ffcc;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links .active-link::after {
+  width: 100%;
+}
+
+.nav-links .active-link {
+  color: #218517;
+}
+
+/* Right-side auth links */
+.auth-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.auth-links a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease-out;
+}
+
+.auth-links a:hover,
+.auth-links .active-link {
+  background-color: yellow;
+  color: #000;
+  font-weight: 500;
+  border: 1px solid #00ffcc;
+  border-radius: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links,
+  .auth-links {
+    gap: 1rem;
+  }
+
+  .nav-links {
+    display: none; /* Hide for mobile unless a menu is added */
+  }
+
+  .auth-links a {
+    padding: 0.3rem 0.8rem;
+  }
+
+  .logo a {
+    font-size: 1.2rem;
+  }
+}

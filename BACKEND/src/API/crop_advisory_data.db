@@ -1,0 +1,87 @@
+
+-- SQLite-compatible Crop Advisory Schema & Data
+
+-- Table: soil_types
+CREATE TABLE IF NOT EXISTS soil_types (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT UNIQUE NOT NULL
+);
+
+-- Table: crops
+CREATE TABLE IF NOT EXISTS crops (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  soil_type_id INTEGER,
+  season TEXT DEFAULT 'all' CHECK(season IN ('kharif', 'rabi', 'zaid', 'all')),
+  advice TEXT,
+  FOREIGN KEY (soil_type_id) REFERENCES soil_types(id)
+);
+
+-- Insert soil types
+INSERT INTO soil_types (name) VALUES 
+  ('black'),
+  ('red'),
+  ('alluvial'),
+  ('sandy'),
+  ('laterite');
+
+-- Insert crops with seasonal advice
+INSERT INTO crops (name, soil_type_id, season, advice) VALUES
+('Cotton', 1, 'kharif', 'Cotton grows well in black soil with warm climates and dry conditions during Kharif.'),
+('Soybean', 1, 'kharif', 'Soybean is suitable for black soil with moderate rainfall during Kharif.'),
+('Tur (Pigeon Pea)', 1, 'kharif', 'Tur grows well in deep black soil with warm climates during Kharif season.'),
+('Wheat', 1, 'rabi', 'Wheat can be cultivated in black soil during the Rabi season under irrigated conditions.'),
+('Sorghum (Jowar)', 1, 'kharif', 'Well-suited for black soil in semi-arid zones with moderate rainfall.'),
+('Sunflower', 1, 'rabi', 'Grows well in moist black soil with good drainage during cool season.'),
+('Linseed', 1, 'rabi', 'Ideal for deep black soils in cooler months with moderate moisture.'),
+('Gram (Chickpea)', 1, 'rabi', 'Grows in residual moisture of black soil post-kharif harvest.'),
+('Millet', 2, 'kharif', 'Red soil supports millet farming with minimal water needs during Kharif.'),
+('Groundnut', 2, 'kharif', 'Groundnut is ideal for red soil with moderate nutrients during Kharif.'),
+('Chili', 2, 'rabi', 'Chili can be cultivated in red loamy soil in Rabi season with proper irrigation.'),
+('Horse Gram', 2, 'rabi', 'Horse gram is a drought-resistant pulse ideal for red soil during Rabi.'),
+('Sorghum (Jowar)', 2, 'kharif', 'Red soil with low fertility and moderate rainfall suits sorghum.'),
+('Ragi (Finger Millet)', 2, 'kharif', 'Drought-resistant and thrives in red soil with minimal water.'),
+('Tomato', 2, 'zaid', 'Red loamy soil is ideal; requires proper irrigation in summer.'),
+('Onion', 2, 'rabi', 'Requires red soil rich in organic matter and good drainage.'),
+('Wheat', 3, 'rabi', 'Alluvial soil is best for wheat during the Rabi season.'),
+('Sugarcane', 3, 'all', 'Sugarcane thrives in fertile alluvial soil and warm weather across all seasons.'),
+('Rice', 3, 'kharif', 'Rice requires water-retentive alluvial soil and grows best during Kharif.'),
+('Maize', 3, 'kharif', 'Maize prefers fertile alluvial soil with good drainage during Kharif.'),
+('Barley', 3, 'rabi', 'Grows well in fertile alluvial soils with adequate irrigation.'),
+('Lentil (Masoor)', 3, 'rabi', 'Ideal for well-drained alluvial soil after rice harvest.'),
+('Jute', 3, 'kharif', 'Grows well in warm humid climates with water-retentive alluvial soil.'),
+('Mustard', 3, 'rabi', 'Requires fertile alluvial soil and cool climate.'),
+('Bajra', 4, 'kharif', 'Bajra suits sandy soil with a hot and dry climate during Kharif.'),
+('Cactus', 4, 'all', 'Specialty crops like cactus or aloe vera grow in sandy deserts throughout the year.'),
+('Watermelon', 4, 'zaid', 'Watermelon thrives in sandy soil during the hot Zaid season.'),
+('Sesame', 4, 'kharif', 'Sesame grows in sandy-loam soil with low water requirement in Kharif season.'),
+('Mung Bean (Green Gram)', 4, 'kharif', 'Sandy soil with adequate irrigation supports green gram.'),
+('Carrot', 4, 'rabi', 'Loose sandy soil is ideal for root development in cool season.'),
+('Muskmelon', 4, 'zaid', 'Sandy soils warm quickly and suit melons in summer.'),
+('Drumstick (Moringa)', 4, 'all', 'Thrives in sandy, well-drained soils with minimum care.'),
+('Tea', 5, 'all', 'Laterite soil is acidic and good for tea plantations in high rainfall areas throughout the year.'),
+('Cashew', 5, 'kharif', 'Cashew adapts well to laterite soil and coastal climates during Kharif.'),
+('Pineapple', 5, 'zaid', 'Pineapple grows well in laterite soil during the Zaid season with proper drainage.'),
+('Coffee', 5, 'rabi', 'Coffee prefers laterite soil in the Rabi season, especially in shaded, hilly regions.'),
+('Black Pepper', 5, 'all', 'Grows well in laterite soil with partial shade and high rainfall.'),
+('Arecanut', 5, 'all', 'Laterite soil and high humidity support arecanut plantations.'),
+('Ginger', 5, 'kharif', 'Lateritic soil rich in humus with good rainfall favors ginger.'),
+('Tapioca', 5, 'kharif', 'Requires well-drained laterite soils with moderate water.'),
+('Peanut', 1, 'kharif', 'Peanuts grow well in deep black soil with good drainage.'),
+('Guar (Cluster Bean)', 1, 'kharif', 'Cluster beans tolerate dry black soil and warm weather.'),
+('Safflower', 1, 'rabi', 'Safflower thrives in residual moisture in black soils during Rabi.'),
+('Sweet Potato', 2, 'kharif', 'Sweet potato adapts to red soils and warm humid climate.'),
+('Pigeon Pea', 2, 'kharif', 'Performs well in red soil with moderate rainfall.'),
+('Cowpea', 2, 'zaid', 'Cowpea is a warm-season crop suitable for red sandy soil.'),
+('Peas', 3, 'rabi', 'Peas require fertile alluvial soil and cooler temperatures during Rabi.'),
+('Cabbage', 3, 'rabi', 'Grows in fertile alluvial soil during the cool Rabi season.'),
+('Cauliflower', 3, 'rabi', 'Thrives in alluvial soil with good irrigation in winter.'),
+('Spinach', 3, 'all', 'Grows year-round in rich alluvial soil with good organic content.'),
+('Okra', 4, 'kharif', 'Okra grows in sandy soil with warm temperature and good drainage.'),
+('Lettuce', 4, 'zaid', 'Lettuce is ideal for sandy soils in spring with cool temperatures.'),
+('Beetroot', 4, 'rabi', 'Beetroot prefers sandy-loam soil in cooler conditions.'),
+('Asparagus', 4, 'zaid', 'Asparagus grows well in sandy, well-drained soils in warm climates.'),
+('Turmeric', 5, 'kharif', 'Laterite soils rich in organic content support turmeric growth.'),
+('Vanilla', 5, 'all', 'Vanilla prefers laterite soil in warm, moist climates.'),
+('Betel Leaf', 5, 'all', 'Betel grows in laterite soil with shade and constant moisture.'),
+('Arrowroot', 5, 'kharif', 'Arrowroot grows in porous laterite soil with high rainfall.');

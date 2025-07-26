@@ -1,0 +1,165 @@
+.divider{
+  margin-inline: 50px;
+  height: 2px;
+  margin-top: 40px;
+}
+
+.about-tabs-container {
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  
+}
+
+.tab-button {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: #111;
+}
+
+.tab-button:hover {
+  border-color: #00cc88;
+}
+
+.tab-button.active {
+  background-color: #ccff66;
+  border: none;
+}
+
+.tab-content{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: first baseline;
+}
+
+.tab-text{
+  width: 70%;
+  text-align: start;
+}
+
+.tab-content ul {
+  width: 30%;
+  display: flex;
+  margin-bottom: 1rem;
+  list-style-type: disc;
+  color: #111;
+  font-weight: 600;
+}
+.tab-content h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #222;
+}
+
+.tab-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555;
+  max-width: 800px;
+}
+
+.learn-more-btn {
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  border: 1px solid #ccc;
+  border-radius: 9999px;
+  background: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+  color: black;
+}
+
+.learn-more-btn:hover {
+  background-color: #f0f0f0;
+}
+@media (max-width: 1024px) {
+  .tab-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .tab-text,
+  .tab-content ul {
+    width: 100%;
+  }
+
+  .tab-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .tab-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-tabs-container {
+    padding: 3rem 1.5rem;
+  }
+
+  .tab-buttons {
+    gap: 0.8rem;
+  }
+
+  .tab-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .tab-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .tab-content p {
+    font-size: 0.95rem;
+  }
+
+  .learn-more-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-tabs-container {
+    padding: 2.5rem 1rem;
+  }
+
+  .tab-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .tab-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .tab-content p {
+    font-size: 0.9rem;
+  }
+
+  .tab-content ul {
+    font-size: 0.9rem;
+  }
+
+  .learn-more-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+}

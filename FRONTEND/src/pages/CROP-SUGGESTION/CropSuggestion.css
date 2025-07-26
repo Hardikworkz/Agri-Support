@@ -1,0 +1,524 @@
+.crop-suggestion-page {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f6fefc;
+  padding: 2rem;
+  color: #1b1f23;
+}
+
+.crop-section {
+  width: auto;
+  height: 70vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #e8f7ef, #f4fbf8);
+  padding: 10px 20px;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.05);
+}
+
+.hero-left {
+  max-width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #d1fae5;
+  color: #047857;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.hero-left h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.hero-left .highlight {
+  color: #10b981;
+}
+
+.hero-left p {
+  font-size: 1.05rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  flex: 1 1 200px;
+  min-width: 180px;
+}
+.form-group select{
+  background-color: black;
+  color: white;
+}
+.form-group button {
+  background: #059669;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error {
+  color: #dc2626;
+  margin-top: 0.75rem;
+}
+
+/* === Hero Right === */
+.hero-right {
+  position: relative;
+  
+}
+
+.hero-image {
+  width: 320px;
+  border-radius: 1rem;
+}
+
+.yield-card {
+  position: absolute;
+  bottom: 4px;
+  left: -52px;
+  background: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.yield-card p {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.yield-card strong {
+  font-size: 1.25rem;
+  color: #059669;
+}
+
+/* === Crop Suggestions === */
+.crop-suggestions {
+  padding: 1rem;
+  background: linear-gradient(135deg, #6B8E23, #C2B280, #F4A460);
+  margin-top: 2rem;
+  border-radius: 20px;
+}
+
+.crop-suggestions h3 {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  color: #14532d;
+}
+
+.crop-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.crop-card {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  flex: 1 1 250px;
+}
+
+.crop-card:hover
+{
+  transform: scale(1.04);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1);
+  background-color: #e9f7f2;
+}
+.crop-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.crop-info input {
+  margin-right: 0.5rem;
+}
+
+.crop-info h4 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.crop-info p{
+    font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+/* Match Badge */
+.match-badge{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.match-badge icon{
+  font-size: 30px;
+}
+.match-badge match{
+  background-color: #d1f7e6;
+  color: #066e42;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* === Recommended Crops === */
+.recommended-crops {
+  margin-top: 3rem;
+  text-align: center;
+}
+.crop-recommendations {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  height: auto;
+}
+.crop-card-advanced {
+  padding: 1.5rem;
+  border-radius: 16px;
+  background-color: #f7f7f7;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transform: scale(1);
+  cursor: pointer;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+}
+
+.crop-card-advanced:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1);
+  background-color: #e9f7f2; /
+}
+
+/* Individual Crop Colors */
+.crop-card-advanced.wheat {
+  background-color: #eafaf1;
+}
+.crop-card-advanced.corn {
+  background-color: #fff9ea;
+}
+.crop-card-advanced.soybeans {
+  background-color: #eaf8f8;
+}
+
+.crop-card-advanced:hover.wheat {
+  background-color: #d4f5e3;
+}
+.crop-card-advanced:hover.corn {
+  background-color: #fff4cc;
+}
+.crop-card-advanced:hover.soybeans {
+  background-color: #d4f2f2;
+}
+
+.crop-card-advanced h4 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.crop-card-advanced p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.crop-card-advanced ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.crop-card-advanced li {
+  margin: 4px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.crop-card-advanced li price{
+  color: green;
+  font-weight: 400;
+}
+.crop-box {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  width: 280px;
+  text-align: center;
+}
+
+.crop-box .icon {
+  font-size: 2rem;
+  color: #4caf50;
+  margin-bottom: 0.5rem;
+}
+
+/* WHY SMART CROP PLANNING SECTION */
+.why-smart {
+  margin-top: 3rem;
+  border-radius: 20px;
+  background-color: #d2e2ea;
+  padding: 4rem 2rem;
+  border-top: 1px solid #e1e7ec;
+}
+
+.why-content {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.why-left {
+  flex: 1;
+  max-width: 40%;
+}
+.why-left h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.why-left p {
+  color: #4d5e6f;
+  margin-bottom: 1.5rem;
+}
+
+.why-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.why-list li {
+  display: flex;
+  align-items: flex-start;
+  color: #263238;
+  line-height: 1.6;
+  align-items: center;
+  justify-content: baseline;
+}
+
+.why-list .icon {
+  font-size: 1.2rem;
+  margin-right: 0.75rem;
+  margin-top: 0.25rem;
+  color: #00b894;
+  background-color: #047857;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.why-right {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+}
+
+.grid-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.success-rate-card {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.success-rate-card strong {
+  color: #009966;
+  font-size: 1.25rem;
+}
+
+
+/* === What's Coming Next === */
+.whats-next {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.whats-next h3 {
+  margin-bottom: 2rem;
+  color: #14532d;
+}
+
+.next-features {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  width: 280px;
+}
+/* === Responsive Enhancements === */
+@media (max-width: 1024px) {
+  .crop-section {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .hero-left {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .hero-left p {
+    font-size: 1rem;
+  }
+
+  .form-group {
+    justify-content: center;
+  }
+
+  .hero-right {
+    margin-top: 2rem;
+  }
+
+  .yield-card {
+    left: auto;
+    right: 0;
+    bottom: -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .crop-recommendations {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .why-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .why-left, .why-right {
+    max-width: 100%;
+  }
+
+  .why-left h3 {
+    font-size: 1.5rem;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .success-rate-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 1rem;
+  }
+
+  .crop-card {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-left h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-left p {
+    font-size: 0.95rem;
+  }
+
+  .form-group button {
+    font-size: 1rem;
+  }
+
+  .crop-suggestions h3 {
+    font-size: 1.25rem;
+  }
+
+  .crop-card-advanced h4 {
+    font-size: 1.1rem;
+  }
+
+  .crop-card-advanced p {
+    font-size: 0.85rem;
+  }
+
+  .feature-box {
+    width: 100%;
+  }
+}
